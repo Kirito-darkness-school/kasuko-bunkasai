@@ -55,26 +55,7 @@ body {
     color: #ffcc00; /* ホバー時の色 */
 }
 
-/*カルーセル関係*/
-#carousel {
-  display: flex;
-  overflow-x: auto;          /* 横スクロールを許可 */
-  scroll-snap-type: x mandatory; /* スクロール位置をスナップさせる */
-  gap: 16px;                 /* スライド間の隙間 */
-  padding: 20px;
-}
 
-.card {
-  flex: 0 0 80%;             /* 1枚の幅を画面の80%にする */
-  height: 200px;
-  scroll-snap-align: center; /* 中央にスナップさせる */
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: white;
-}
 
 /* --- コンテンツの調整 --- */
 .content {
