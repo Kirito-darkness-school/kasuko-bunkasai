@@ -3,4 +3,4 @@ new type site for kasuko-bunnkasai
 
 tonikaku bright Yasumura.
 toukaidoutyuu mannkurige
-Made by Take, Nishi
+Made by Take, Nishi,3110kota
