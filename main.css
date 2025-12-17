@@ -1,109 +1,90 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-    line-height: 1.6;
+/* ========================================= */
+/* カルーセル関連のスタイル（JS制御用） */
+/* ========================================= */
+
+/* 1. 外側コンテナ：表示領域を制限し、はみ出しを隠す */
+#outer-carousel {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden; 
+    position: relative; /* 矢印の基準点 */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- ヘッダーのスタイル（重要） --- */
-.fixed-header {
-    position: fixed; /* ヘッダーを画面上部に固定 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px; /* ヘッダーの高さを指定 */
-    background-color: #333; /* 背景色（黒系） */
-    color: #fff; /* 文字色（白） */
-    display: flex; /* 横並びにする */
-    align-items: center; /* 上下中央揃え */
-    padding: 0 20px; /* 左右の余白 */
-    box-sizing: border-box; /* paddingを含めた幅計算 */
-    z-index: 1000; /* 他の要素より手前に表示 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影をつける */
-}
-
-.fixed-header .logo {
-    height:40px;
-    width: auto;    /* 比率を保つ */
-    display: block; /* 余白除去 */}
-
-.fixed-header nav{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%)
-}
-/* ナビゲーションのスタイル */
-.fixed-header nav ul {
-    list-style: none; /* リストの・を消す */
-    margin: 0;
-    padding: 0;
-    display: flex; /* 横並び */
-    justify-content: center;
-}
-
-.fixed-header nav ul li {
-    margin-left: 20px;
-}
-
-.fixed-header nav ul li a {
-    color: #fff;
-    text-decoration: none; /* 下線を消す */
-    font-weight: bold;
-}
-
-.fixed-header nav ul li a:hover {
-    color: #ffcc00; /* ホバー時の色 */
-}
-
-/*カルーセル関係*/
+/* 2. 内側トラック：実際に動く要素 */
 #carousel {
-  display: flex;
-  overflow-x: auto;          /* 横スクロールを許可 */
-  scroll-snap-type: x mandatory; /* スクロール位置をスナップさせる */
-  gap: 16px;                 /* スライド間の隙間 */
-  padding: 20px;
-  white-space: nowrap; /* 重要：中身を横一列に並べる */
-  width: 90%;         /* 親の幅 */
+    display: flex;
+    width: 400%; /* カード4枚分 = 100% * 4 */
+    
+    /* トランジション（滑らかな動き）を適用 */
+    transition: transform 0.5s ease-in-out; 
+    
+    /* CSS Animationは削除 */
+    /* animation: slide-show 20s linear infinite; */
 }
 
+/* 3. 各カードのスタイル */
 .card {
-  flex: 0 0 80%;             /* 1枚の幅を画面の80%にする */
-  height: 200px;
-  scroll-snap-align: center; /* 中央にスナップさせる */
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: white;
+    /* 1画面に1枚表示するための幅 */
+    flex: 0 0 25%; /* 100% / 4枚 = 25% */
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    box-sizing: border-box;
 }
 
-/* --- コンテンツの調整 --- */
-.content {
-    /* ヘッダーが固定されている分、中身が隠れないように上部に余白を開ける */
-    padding-top: 80px; 
-    padding-left: 20px;
-    padding-right: 20px;
+/* --- 矢印ボタンのスタイル --- */
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 50;
+    font-size: 1.5em;
+    border-radius: 4px;
+    transition: background 0.3s;
 }
 
-p{text-align:center;}
+.prev-button:hover, .next-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
 
-/* --- フッター --- */
-footer {
-    background-color: #eee;
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* --- ドットナビゲーションのスタイル --- */
+#pagination-dots {
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
-/* --- スクロールバーを非表示にする設定 --- */
-
-/* Chrome, Safari, Edge (Chromium系) 用 */
-#carousel::-webkit-scrollbar {
-    display: none;
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc; /* 非アクティブなドット */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Firefox 用 */
-#carousel {
-    scrollbar-width: none; 
+.dot.active {
+    background-color: #2196F3; /* アクティブなドット */
 }
