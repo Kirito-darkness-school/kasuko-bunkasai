@@ -250,7 +250,7 @@ nav.crowded-site-invite h3:hover{
     font-size: 2.5em;
 }
 
-.festival-projects-slide .slide-inner{
+.festival-projects-slide{
     width: 100%;
     height: 300px;
     border-top: 2px solid #ccc;
@@ -262,40 +262,58 @@ nav.crowded-site-invite h3:hover{
 @keyframes sliding {
   0% {
     /* アニメーション開始時 */
-    right: 0px;
-    left: 100%;
+    right: -20%;
+    transform: translateY(0%);
   }
 
   100% {
     /* アニメーション終了時 */
-    left: 0px;
-    right: 100%;
+    right: 120%;
+    transform: translateY(0%);
   }
 }
 
-.festival-projects-slide .slide-inner{
+.festival-projects-slide{
     overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 水平方向中央 */
+    align-items: center;     /* 垂直方向中央 */
+    height: 500px;           /* 例：ビューポートの高さ */
+    width: 90%;
+    margin: 100px auto;
+    margin-bottom: 200px;
+}
+
+.festival-projects-slide h1{
+    font-size: 3em;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .festival-projects-slide img{
     height: 100%;
+    position: absolute;
+    display: inline;
+    animation: sliding 10s linear infinite normal forwards;
+    transform: translateY(100%);
 }
 
 .festival-projects-slide img:nth-child(1){
-    animation: sliding 10s linear 0s infinite normal forwards;
+    animation-delay: 0s;
 }
 .festival-projects-slide img:nth-child(2){
-    animation: sliding 10s linear 2s infinite normal forwards;
+    animation-delay: 4s;
 }
 .festival-projects-slide img:nth-child(3){
-    animation: sliding 10s linear 4s infinite normal forwards;
+    animation-delay: 8s;
 }
 .festival-projects-slide img:nth-child(4){
-    animation: sliding 10s linear 6s infinite normal forwards;
+    animation-delay: 12s;
 }
 .festival-projects-slide img:nth-child(5){
-    animation: sliding 10s linear 8s infinite normal forwards;
+    animation-delay: 16s;
 }
 .festival-projects-slide img:nth-child(6){
-    animation: sliding 10s linear 10s infinite normal forwards;
+    animation-delay: 20s;
 }
