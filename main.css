@@ -228,6 +228,11 @@ nav.crowded-site-invite a{
 
     color: black;
     text-decoration: none;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url("images/konzatsu\ joukyou\ gaiyou.png");
+    background-blend-mode: lighten;
+    background-size: cover;
 }
 
 nav.crowded-site-invite a:hover{
