@@ -293,9 +293,13 @@ nav.crowded-site-invite h3:hover{
 
 .festival-projects-slide img{
     height: 100%;
+    width: 500px;
+    object-fit: cover;
+
     position: absolute;
     display: inline;
     animation: sliding 10s linear infinite normal forwards;
+    animation-fill-mode: forwards;
     transform: translateY(100%);
 }
 
