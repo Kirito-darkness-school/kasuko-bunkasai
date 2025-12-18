@@ -7,12 +7,12 @@
     width: 100%;
     height: 60px;
     /* ヘッダーの高さを指定 */
-    background-color: #333;
-    /* 背景色（黒系） */
-    color: #fff;
-    /* 文字色（白） */
+    background-color: #FFFFFF;
+    /* 背景色（白） */
     display: flex;
     /* 横並びにする */
+    opacity: 0.8;
+    /* 透明度 */
     align-items: center;
     /* 上下中央揃え */
     padding: 0 20px;
@@ -31,12 +31,16 @@
     /* 比率を保つ */
     display: block;
     /* 余白除去 */
+    opacity:1;
+    /* 透明度 */
 }
 
 .fixed-header nav {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    opacity:1;
+    /* 透明度 */
 }
 
 /* ナビゲーションのスタイル */
