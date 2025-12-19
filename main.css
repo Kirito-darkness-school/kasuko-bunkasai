@@ -73,11 +73,31 @@
     font-size: 1.6rem;
 }
 
+/*ホバー時に線の色を変えて線を出す機能*/
 .fixed-header nav ul li a:hover {
     color: #b94047 ;
     /* ホバー時の色 */
 }
+.fixed-header nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;            /* 要素の一番上に配置 */
+    left: 0;
+    width: 100%;       /* 幅は要素いっぱい */
+    height: 3px;       /* 線の太さ */
+    background-color: #007bff; /* 線の色 */
+    
+    /* アニメーションの肝 */
+    transform: scaleX(0);       /* 最初は横幅を0にして隠す */
+    transform-origin: center;   /* 拡大の起点を「中央」に設定 */
+    transition: transform 0.3s ease-out; /* 0.3秒かけて伸びる */
+  }
 
+  /* ホバー時に線の大きさを戻す */
+ .fixed-header nav ul li a::before :hover{
+    transform: scaleX(1); /* 横幅を100%（等倍）に戻す＝線が伸びる */
+  }
+/*ここまで*/
 
 /*コンテンツタグで囲って80px下げる→headerの下に隠れないように*/
 .content {
