@@ -209,7 +209,7 @@
     display: inline;
 }
 
-nav.crowded-site-invite a{
+nav.invite-box a{
     display: block;
 
     text-align: center;
@@ -235,19 +235,15 @@ nav.crowded-site-invite a{
     background-size: cover;
 }
 
-nav.crowded-site-invite a:hover{
+nav.invite-box a:hover{
     height: 350px;
     width: 73%;
     margin-top: 30px;
 }
 
-nav.crowded-site-invite h3{
+nav.invite-box h3{
     font-size: 2em;
     transition: all 0.3s;
-}
-
-nav.crowded-site-invite h3:hover{
-    font-size: 2.5em;
 }
 
 .festival-projects-slide{
