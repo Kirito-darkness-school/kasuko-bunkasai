@@ -245,11 +245,11 @@ nav.invite-box h3{
     transition: all 0.3s;
 }
 
-nav.crowded-site{
+nav.crowded-site a{
     background-image: url("images/konzatsu\ joukyou\ gaiyou.png");
 }
 
-nav.reservation-site{
+nav.reservation-site a{
     background-image: url("images/home/yaju.jpg");
 }
 
