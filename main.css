@@ -245,7 +245,7 @@
     display: inline;
 }
 
-nav.crowded-site-invite a{
+nav.invite-box a{
     display: block;
 
     text-align: center;
@@ -266,24 +266,27 @@ nav.crowded-site-invite a{
     border-radius: 10px;
 
     background-color: rgba(255, 255, 255, 0.8);
-    background-image: url("images/konzatsu\ joukyou\ gaiyou.png");
     background-blend-mode: lighten;
     background-size: cover;
 }
 
-nav.crowded-site-invite a:hover{
+nav.invite-box a:hover{
     height: 350px;
     width: 73%;
     margin-top: 30px;
 }
 
-nav.crowded-site-invite h3{
+nav.invite-box h3{
     font-size: 2em;
     transition: all 0.3s;
 }
 
-nav.crowded-site-invite h3:hover{
-    font-size: 2.5em;
+nav.crowded-site a{
+    background-image: url("images/konzatsu\ joukyou\ gaiyou.png");
+}
+
+nav.reservation-site a{
+    background-image: url("images/home/yaju.jpg");
 }
 
 .festival-projects-slide{
