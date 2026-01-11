@@ -21,6 +21,9 @@
             background-image: url('https://picsum.photos/1920/1080?random=2');
         }
 
+        .reservation-bg-1-kasukousai{
+            position: absolute;
+        }
 /* ========================================= */
 /* カルーセル関連のスタイル（JS制御用） */
 /* ========================================= */
@@ -117,30 +120,6 @@
 .dot.active {
     background-color: #2196F3;
     /* アクティブなドット */
-}
-
-.top-festival-image {
-    text-align: center;
-    width: 100%;
-
-    margin: 200px 0;
-}
-
-.top-festival-image img {
-    width: 30%;
-    margin: 0 auto;
-}
-
-.top-festival-image h1 {
-    font-size: 5em;
-    line-height: none;
-    display: inline;
-}
-
-.top-festival-image p {
-    font-size: 0.5em;
-    color: #777;
-    display: inline;
 }
 
 nav.invite-box a{
