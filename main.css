@@ -21,6 +21,9 @@
         .bg-1 {
             background-image: url('https://picsum.photos/1920/1080?random=2');
             position:relative;
+            display:flex;
+            justify-content:center;
+            align-items:center;
         }
         .reservation-bg-1-kasukousai{
             position: absolute;
