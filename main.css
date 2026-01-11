@@ -25,23 +25,21 @@
             justify-content:center;
             align-items:center;
         }
-        .reservation-bg-1-kasukousai{
-            position: absolute;
-            top : 50%;
-            left:50%;
-            transform: translate(-50%, -50%);
+
+        .reservation-top-kasukousai{
+            font-size:5em;
+            font-weight: bold;
+            color:rgb(0, 0, 0);
+            text-shadow: 2px 2px 4px rgba(58, 58, 58, 0.7);
         }
-        .reservation-bg-1-logo{
-            position: absolute;
-            top : 50%;
-            left:50%;
-            transform: translate(-50%, -50%);
+        .reservation-top-logo{
+            width:40%;
+            height:auto;
+            margin-top: none;
         }
-        .reservation-bg-1-KIPCgif{
-            position: absolute;
-            top : 50%;
-            left:50%;
-            transform: translate(-50%, -50%);
+        .reservation-top-KIPCgif{
+            width:30%;
+            height:auto;
         }
 /* ========================================= */
 /* カルーセル関連のスタイル（JS制御用） */
