@@ -17,12 +17,28 @@
         }
 
         /* 1枚目の背景画像 */
+
         .bg-1 {
             background-image: url('https://picsum.photos/1920/1080?random=2');
+            position:relative;
         }
-
         .reservation-bg-1-kasukousai{
             position: absolute;
+            top : 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .reservation-bg-1-logo{
+            position: absolute;
+            top : 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .reservation-bg-1-KIPCgif{
+            position: absolute;
+            top : 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
         }
 /* ========================================= */
 /* カルーセル関連のスタイル（JS制御用） */
