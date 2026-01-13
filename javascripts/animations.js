@@ -12,7 +12,9 @@ crowdedSiteInvite.forEach((elem)=>{
     crowdedSiteInviteH3.style.fontSize = '2em';
 })});
 
+//ヘッダーを遅れて表示
+const headerRug = 5000;
 setTimeout(() => {
     const header = document.querySelector('.fixed-header');
     header.style.transform = 'translateY(0)';
-}, 5000);
+}, headerRug);
