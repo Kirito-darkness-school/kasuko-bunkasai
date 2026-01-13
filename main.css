@@ -1,11 +1,39 @@
-/*コンテンツタグで囲って80px下げる→headerの下に隠れないように*/
-.content {
-    /* ヘッダーが固定されている分、中身が隠れないように上部に余白を開ける */
-    padding-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
+.fixed-bg {
+            /* 【ここが最重要】 画像をウィンドウに対して固定する */
+            background-attachment: fixed; 
+            
+            /* 画像を画面いっぱいに広げる */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* 背景エリアの高さ（全画面） */
+            height: 100vh; 
+            
+            /* コンテンツの中央揃え用（必須ではありません） */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        /* 1枚目の背景画像 */
+
+        .bg-1 {
+            background-image: url('https://picsum.photos/1920/1080?random=2');
+            position:relative;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .春高祭ll.gif{
+            height:auto;
+        }
+        .reservation-top-logo{
+            width:40%;
+            height:auto;
+            margin-top: none;
+        }
 /* ========================================= */
 /* カルーセル関連のスタイル（JS制御用） */
 /* ========================================= */
@@ -102,30 +130,6 @@
 .dot.active {
     background-color: #2196F3;
     /* アクティブなドット */
-}
-
-.top-festival-image {
-    text-align: center;
-    width: 100%;
-
-    margin: 200px 0;
-}
-
-.top-festival-image img {
-    width: 30%;
-    margin: 0 auto;
-}
-
-.top-festival-image h1 {
-    font-size: 5em;
-    line-height: none;
-    display: inline;
-}
-
-.top-festival-image p {
-    font-size: 0.5em;
-    color: #777;
-    display: inline;
 }
 
 nav.invite-box a{
