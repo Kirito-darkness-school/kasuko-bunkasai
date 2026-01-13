@@ -13,8 +13,15 @@ crowdedSiteInvite.forEach((elem)=>{
 })});
 
 //ヘッダーを遅れて表示
-const headerRug = 3000;
+const headerRug = 5000;
 setTimeout(() => {
     const header = document.querySelector('.fixed-header');
     header.style.transform = 'translateY(0)';
 }, headerRug);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const kasukoGif = document.querySelector('.kasuko-gif');
+    kasukoGif.style.opacity = '1';
+    kasukoGif.src = "";
+    kasukoGif.src = "./images/春高祭ll.gif";
+});
