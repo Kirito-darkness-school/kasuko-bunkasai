@@ -46,6 +46,10 @@ body{
 
 /* ボタン自体のスタイル（装飾） */
 button.menu-button {
+    width: 50px;               /* 幅を固定（正方形にする） */
+    height: 50px;              /* 高さを固定（正方形にする） */
+    padding: 0;                /* 余計な内側の隙間をゼロにする */
+    
     background: #333;
     color: #fff;
     border: none;
@@ -215,6 +219,7 @@ button.menu-button {
     }
 
 }
+
 
 
 
