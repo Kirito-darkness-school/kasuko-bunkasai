@@ -171,6 +171,7 @@ button.menu-button {
     font-size: 1.6rem;
     display: inline-block; /* 挙動を安定させるため入れておくと良いです */
     padding-top: 5px; /* 線と文字が被らないように少し隙間を調整 */
+    transition : color 0.15s ease; /* 文字色の変化アニメーション */
 }
 
 /* ホバー時に文字色を変える */
