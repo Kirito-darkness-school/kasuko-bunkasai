@@ -206,8 +206,8 @@ button.menu-button {
 /*スマホ版*/
 @media screen and (max-width: 768px) {
    .fixed-header .header-logo {
-        height: auto;
-        width: 60%;
+    width: 20%;
+    height: auto;
     }
     .menu-button{
         display: block;
